@@ -1,0 +1,106 @@
+ /* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.map { 
+  width: 100%;
+  height: 100%;
+  margin:0;
+}
+
+#map_canvas{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+#map_canvas > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#placeDetails { 
+  position: absolute;
+  width: 300px;
+  height:100%;
+  bottom: 0;
+  right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  /* Semi-transparent background */
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  font-size: 80%;
+
+  /* Rounded top left corner */
+  border-top-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -webkit-border-top-left-radius: 15px;
+}
+
+/* Fit the text nicely inside the box */
+h3, #infotext {
+  font-family: sans-serif;
+  margin-bottom: 0;
+}
+
+#placeDetails p {
+  margin-top: 10px;
+}
+
+a:link, a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Smartphones ----------- */
+@media only screen 
+and (min-device-width : 346px) 
+and (max-device-width : 768px)
+{
+  #map_canvas { 
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #placeDetails 
+  { 
+    position: absolute;
+    width: 100%;
+    height:250px;
+    right: 0;
+    bottom:-250px;
+    padding:0;
+      
+    /* Semi-transparent background */
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 80%;
+  
+    /* Rounded top left corner */
+    border-top-left-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -webkit-border-top-left-radius: 15px;
+  }
+  
+  #placeDetails h3, p {
+    margin-left: 10px;
+  }
+}
